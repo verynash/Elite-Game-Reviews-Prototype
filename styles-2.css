@@ -1,0 +1,235 @@
+:root {
+    --primary-background-color: #040d12;
+    --header-color: #FF3131;
+    --header-font-size: 24px;
+    --header-font-family: 'Acme', sans-serif;
+    --footer-font-color: #6b6b6b;
+    --bg3-primary-color: #f7da04;
+    --sts-primay-color: #7eebe8;
+    --eft-primary-color: #ffffff;
+    --content-font-family: "Fira sans", sans-serif;
+    --content-font-color: #f3f3f3;
+    --content-font-size: 18px;
+    --figure-font-size: 14px;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--primary-background-color);
+}
+
+header {
+    width: 100vw;
+    color: var(--header-color);
+}
+
+.home-btn {
+    margin-left: px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 225px;
+    height: 70px;
+    padding: 8px;
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: var(--header-color);
+    color: var(--primary-background-color);
+    border-radius: 0 0 12px;
+    box-shadow: 0 0 5px var(--header-color),
+                0 0 25px var(--header-color);
+                -webkit-box-reflect: below 1px linear-gradient(transparent);    
+
+}
+
+.home-btn-short {
+    display: none;
+}
+
+h1 {
+    font-family: var(--header-font-family);
+    color: var(--primary-background-color);
+    width: fit-content;
+    padding: 12px 28px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.game-title {
+    border-radius: 12px;
+}
+
+.bg3-title {
+    background-color: var(--bg3-primary-color);
+}
+
+.sts-title {
+    background-color: var(--sts-primay-color);
+}
+
+.eft-title {
+    background-color: var(--eft-primary-color);
+}
+
+.gold-star {
+    width: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.review-quote {
+    font-family: var(--content-font-family);
+    font-size: var(--content-font-size);
+    color: var(--content-font-color);
+    text-align: center;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+iframe {
+    width: 761px;
+    height: 428px;
+    margin: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: var(--content-font-color);
+    font-family: var(--content-font-family);
+    font-size: var(--content-font-size);
+    /* border: 2px solid white; */
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+    padding: 1rem;
+    /* border: 2px solid green; */
+}
+
+.text {
+    line-height: 1.5;
+    max-width: 60%;
+    max-width: 75ch;
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+figure {
+    max-width: 40%;
+    align-self: flex-start;
+    font-size: var(--figure-font-size);
+    font-style: italic;
+}
+
+.img-right-bot {
+    margin-left: 2rem;
+    text-align: right;
+} 
+
+.img-left-top {
+    margin-right: 2rem;
+    text-align: left;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 8px;
+    color: var(--footer-font-color);
+    background-color: #040d12;
+    width: 100vw;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .home-btn-full{
+        display: none;
+    }
+
+    .home-btn-short {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    iframe {
+        width: 576px;
+        height: 324px;
+    }
+
+    section {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+
+    figure {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .img-right-bot {
+        margin: 1rem 0 0 0;
+        text-align: center;
+    }
+    
+    .img-left-top {
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    iframe {
+        width: 328px;
+        height: 185px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1281px) {
+    section {
+        max-width: 90%;
+    }
+
+    .text {
+        max-width: 55%;
+    }
+}

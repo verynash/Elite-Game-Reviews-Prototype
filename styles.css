@@ -1,0 +1,118 @@
+:root {
+    --primary-background-color: #040d12;
+    --hero-color: #FF3131;
+    --hero-font-size: 48px;
+    --hero-font-family: 'Acme', sans-serif;
+    --footer-font-color: #6b6b6b;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-background-color);
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hero {
+    display: flex;
+    padding: 20px 35px;
+    min-width: clamp(300px, 40vw, 445px);
+    height: 150px;
+    font-size: var(--hero-font-size);
+    color: var(--hero-color);
+    border: 2px solid var(--hero-color);
+    align-items: center;
+    text-align: center;
+    margin: 4rem;
+    font-family: var(--hero-font-family);
+    box-shadow: 0 0 5px var(--hero-color),
+                0 0 25px var(--hero-color),
+                0 0 50px var(--hero-color);
+    -webkit-box-reflect: below 1px linear-gradient(transparent);
+
+}
+
+.btn-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--hero-font-family);
+    font-size: 20px;
+}
+
+a {
+    width: 250px;
+    height: 85px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--hero-color);
+    transition: .25s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover, a:active, a:focus {
+    background-color: var(--hero-color);
+    color: var(--primary-background-color);
+    box-shadow: 0 0 5px var(--hero-color),
+                0 0 25px var(--hero-color),
+                0 0 50px var(--hero-color);
+                -webkit-box-reflect: below 1px linear-gradient(transparent);
+}
+
+header {
+    margin-bottom: auto;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 8px;
+    color: var(--footer-font-color);
+    background-color: #040d12;
+    width: 100vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .btn-container {
+        flex-direction: column;
+    }
+
+    a {
+        margin-bottom: 2rem;
+        background-color: var(--hero-color);
+        color: var(--primary-background-color);
+        box-shadow: 0 0 5px var(--hero-color),
+                    0 0 25px var(--hero-color);
+                    -webkit-box-reflect: below 1px linear-gradient(transparent);    
+    }
+}
